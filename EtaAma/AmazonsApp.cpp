@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "EtaAma.h"
+#include "AmazonsApp.h"
 
 #include "MainFrm.h"
 #include "AmazonsDoc.h"
@@ -20,8 +20,8 @@ static char THIS_FILE[] = __FILE__;
 BEGIN_MESSAGE_MAP(CAmazonsApp, CWinApp)
 	//{{AFX_MSG_MAP(CAmazonsApp)
 	ON_COMMAND(ID_APP_ABOUT, OnAppAbout)
-	// NOTE - the ClassWizard will add and remove mapping macros here.
-	//    DO NOT EDIT what you see in these blocks of generated code!
+		// NOTE - the ClassWizard will add and remove mapping macros here.
+		//    DO NOT EDIT what you see in these blocks of generated code!
 	//}}AFX_MSG_MAP
 	// Standard file based document commands
 	ON_COMMAND(ID_FILE_NEW, CWinApp::OnFileNew)
@@ -57,19 +57,19 @@ BOOL CAmazonsApp::InitInstance()
 	//  the specific initialization routines you do not need.
 
 #ifdef _AFXDLL
-//	Enable3dControls();			// Call this when using MFC in a shared DLL
+	Enable3dControls();			// Call this when using MFC in a shared DLL
 #else
 	Enable3dControlsStatic();	// Call this when linking to MFC statically
 #endif
 
-								// Change the registry key under which our settings are stored.
-								// TODO: You should modify this string to be something appropriate
-								// such as the name of your company or organization.
-								//SetRegistryKey(_T("Local AppWizard-Generated Applications"));//由于要保存玩家网络名字，所以不用注册表保存信息了
+	// Change the registry key under which our settings are stored.
+	// TODO: You should modify this string to be something appropriate
+	// such as the name of your company or organization.
+	//SetRegistryKey(_T("Local AppWizard-Generated Applications"));//由于要保存玩家网络名字，所以不用注册表保存信息了
 
 	LoadStdProfileSettings();  // Load standard INI file options (including MRU)
 
-							   //Init socket
+	//Init socket
 	WORD wVersionRequested = MAKEWORD(2, 2);
 	WSADATA wsaData;
 	int err = WSAStartup(wVersionRequested, &wsaData);
@@ -113,21 +113,21 @@ class CAboutDlg : public CDialog
 public:
 	CAboutDlg();
 
-	// Dialog Data
+// Dialog Data
 	//{{AFX_DATA(CAboutDlg)
 	enum { IDD = IDD_ABOUTBOX };
 	//}}AFX_DATA
 
 	// ClassWizard generated virtual function overrides
 	//{{AFX_VIRTUAL(CAboutDlg)
-protected:
+	protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
-														//}}AFX_VIRTUAL
+	//}}AFX_VIRTUAL
 
-														// Implementation
+// Implementation
 protected:
 	//{{AFX_MSG(CAboutDlg)
-	// No message handlers
+		// No message handlers
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
@@ -147,7 +147,7 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialog)
 	//{{AFX_MSG_MAP(CAboutDlg)
-	// No message handlers
+		// No message handlers
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 

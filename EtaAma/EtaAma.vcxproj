@@ -30,6 +30,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -145,26 +146,57 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AmazonsAI.h" />
+    <ClInclude Include="AmazonsDoc.h" />
+    <ClInclude Include="AmazonsGameController.h" />
+    <ClInclude Include="AmazonsView.h" />
     <ClInclude Include="EtaAma.h" />
+    <ClInclude Include="GameSettingDlg.h" />
+    <ClInclude Include="GlobalFunctions.h" />
+    <ClInclude Include="HistoryDlg.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="NetMsg.h" />
+    <ClInclude Include="NetworkDlg.h" />
+    <ClInclude Include="NetworkPlayer.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TipDlg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AmazonsAI.cpp" />
+    <ClCompile Include="AmazonsDoc.cpp" />
+    <ClCompile Include="AmazonsGameController.cpp" />
+    <ClCompile Include="AmazonsView.cpp" />
     <ClCompile Include="EtaAma.cpp" />
+    <ClCompile Include="GameSettingDlg.cpp" />
+    <ClCompile Include="GlobalFunctions.cpp" />
+    <ClCompile Include="HistoryDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="NetworkDlg.cpp" />
+    <ClCompile Include="NetworkPlayer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TipDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="EtaAma.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="EtaAma.ico" />
-    <Image Include="small.ico" />
+    <None Include="res\Amazons.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\AmazonsDoc.ico" />
+    <Image Include="res\Black.bmp" />
+    <Image Include="res\icon.bmp" />
+    <Image Include="res\icon.ico" />
+    <Image Include="res\Red.bmp" />
+    <Image Include="res\select.bmp" />
+    <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
